@@ -29,7 +29,7 @@ public class Searcher extends Thread{
     
     @Override
     public void run(){
-        System.out.println("+++++++");
+        //System.out.println("+++++++");
         for (int i =start;i<end && ocurrences <= alarm;i++){
             if (skd.isInBlackListServer(i, ipAddress)){
                 ocurrences+=1;
