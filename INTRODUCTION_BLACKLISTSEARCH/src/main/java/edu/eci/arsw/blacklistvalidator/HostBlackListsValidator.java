@@ -52,10 +52,10 @@ public class HostBlackListsValidator {
             actual += size;
             
         }
-        boolean notAllFound = true;
+        boolean notAllFound = false;
         while (notAllFound){
             for (int i = 0; i < threads; i++) {
-                if (searchers.get(i).getOcurrences()>=BLACK_LIST_ALARM_COUNT){
+                if (searchers.get(i).getOcurrences()>=BLACK_LIST_ALARM_COUNT ){
                     notAllFound = false;
                     for (int j = 0; j < threads; j++) {
                         searchers.get(j).stop();
